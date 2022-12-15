@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added: WordPress extensions for PHPStan
 - Added: PHPStan Extension Installer
 - Added: PHPStan dependency
 - Added: WordPress PHP Compatibility rules
