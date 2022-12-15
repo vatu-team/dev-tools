@@ -1,0 +1,14 @@
+{
+    "name": "vatu/dev-tools",
+    "description": "A collection of development tools use in Vatu projects.",
+    "type": "metapackage",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {},
+    "config": {
+      "sort-packages": true,
+      "optimize-autoloader": true,
+      "preferred-install": "dist"
+    },
+    "prefer-stable": true
+}
