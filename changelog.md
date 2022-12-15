@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added: PHP Unit dependency
 - Added: PHP Magic Number Detector dependency
 - Added: PHP Copy/Paste Detector (CPD) dependency
 - Added: PHP Parallel Lint dependency
