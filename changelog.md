@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added: PHPStan Rule modifications for `roots/wp-password-bcrypt`
 - Added: WordPress extensions for PHPStan
 - Added: PHPStan Extension Installer
 - Added: PHPStan dependency
