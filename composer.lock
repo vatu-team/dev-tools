@@ -4,9 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f01d832643baf4dbd61ef27e4a44881",
-    "packages": [],
-    "packages-dev": [
+    "content-hash": "1375eb61d6f658dbb807308edd2ae645",
+    "packages": [
         {
             "name": "antecedent/patchwork",
             "version": "2.1.21",
@@ -3820,6 +3819,7 @@
             "time": "2022-11-16T09:07:52+00:00"
         }
     ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

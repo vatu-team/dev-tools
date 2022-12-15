@@ -4,8 +4,7 @@
     "type": "metapackage",
     "license": "MIT",
     "minimum-stability": "stable",
-    "require": {},
-    "require-dev": {
+    "require": {
         "brain/monkey": "2.6.1",
         "dealerdirect/phpcodesniffer-composer-installer": "0.7.2",
         "php-parallel-lint/php-parallel-lint": "1.3.2",
