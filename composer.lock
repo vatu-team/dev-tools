@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bbe01011c019e59608e7fafd51897c8",
+    "content-hash": "69c0bf97f8799d05508d8d18bf73e767",
     "packages": [
         {
             "name": "antecedent/patchwork",
