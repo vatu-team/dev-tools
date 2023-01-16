@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://json.schemastore.org/dependabot-2.0.json
+
+version: 2
+
+updates:
+
+  - package-ecosystem: composer
+    directory: "/"
+    registries: "*"
+    schedule:
+      interval: daily
+      time: "00:10"
+      timezone: "Europe/London"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "Upgraded"
+      prefix-development: "Upgraded"
