@@ -11,6 +11,7 @@ updates:
       interval: daily
       time: "00:10"
       timezone: "Europe/London"
+    versioning-strategy: increase
     open-pull-requests-limit: 10
     commit-message:
       prefix: "Upgraded"
