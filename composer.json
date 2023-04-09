@@ -15,7 +15,7 @@
         "povils/phpmnd": "^3.1",
         "sebastian/phpcpd": "^6.0",
         "squizlabs/php_codesniffer": "^3.7",
-        "szepeviktor/phpstan-wordpress": "^1.1",
+        "szepeviktor/phpstan-wordpress": "^1.2",
         "wp-coding-standards/wpcs": "^2.3",
         "wptrt/wpthemereview": "^0.2",
         "yoast/phpunit-polyfills": "^1.0"
