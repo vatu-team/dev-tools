@@ -54,5 +54,6 @@ error_log
 
 ## Composer
 auth.json
+composer.lock
 /vendor
 /vendor_prefix
