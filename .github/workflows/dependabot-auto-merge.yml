@@ -7,12 +7,12 @@ name: "Dependabot Auto Merge"
 on:
 
   workflow_run:
-      workflows:
-        - 'Commit'
-      types:
-      - completed
-      branches:
-        - 'dependabot/**'
+    workflows:
+      - 'Commit'
+    types:
+    - completed
+    branches:
+      - 'dependabot/**'
 
 permissions:
   pull-requests: write
