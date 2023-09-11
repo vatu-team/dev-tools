@@ -1,0 +1,40 @@
+---
+  # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+  #
+  # Version 1.0.0
+  # Author: Michael Bragg <mike@vatu.co.uk>
+
+name: 'Commit'
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'trunk'
+
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}--${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+
+  validate-dependabot:
+    name: 'Validate Dependabot Config'
+    runs-on: 'self-hosted'
+    steps:
+      - uses: 'actions/checkout@v4.0.0'
+      - uses: 'marocchino/validate-dependabot@v2.1.0'
+        id: validate
+      - uses: 'marocchino/sticky-pull-request-comment@v2.8.0'
+        if: always()
+        with:
+          header: validate-dependabot
+          message: ${{ steps.validate.outputs.markdown }}

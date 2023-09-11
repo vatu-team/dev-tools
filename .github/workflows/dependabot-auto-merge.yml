@@ -5,7 +5,14 @@
 name: "Dependabot Auto Merge"
 
 on:
-  pull_request_target:
+
+  workflow_run:
+      workflows:
+        - 'Commit'
+      types:
+      - completed
+      branches:
+        - 'dependabot/**'
 
 permissions:
   pull-requests: write
@@ -20,17 +27,19 @@ jobs:
   # - Fetch Dependabot metadata.
   # - Auto Approve Pull Request
   # - Auto Merges Pull Request.
-  dependabot-aut-merge:
+  auto-merge-pr:
 
     runs-on: self-hosted
 
-    # Only run if the creator is Dependabot or previous workflow was successful.
-    if: ${{github.actor == 'dependabot[bot]'}}
+    # Only run if the creator is Dependabot and previous workflow was successful.
+    if: >
+      github.actor == 'dependabot[bot]' &&
+      github.event.workflow_run.conclusion == 'success'
 
     steps:
 
       - name: "Generate Vatu Bot token."
-        uses: tibdex/github-app-token@v1.6
+        uses: 'tibdex/github-app-token@v1.6'
         id: generate_token
         with:
           app_id: ${{ secrets.VATU_BOT_ID }}
@@ -38,7 +47,7 @@ jobs:
 
       - name: "Fetch Dependabot metadata."
         id: dependabot-metadata
-        uses: dependabot/fetch-metadata@v1.3.5
+        uses: 'dependabot/fetch-metadata@v1.3.5'
         with:
           github-token: ${{ steps.generate_token.outputs.token }}
           alert-lookup: true
@@ -47,7 +56,7 @@ jobs:
 
       - name: "Auto Approve Pull Request."
         if: ${{steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major'}}
-        uses: actions/github-script@v6.1.0
+        uses: 'actions/github-script@v6.1.0'
         with:
           github-token: ${{ steps.generate_token.outputs.token }}
           script: |
@@ -60,7 +69,7 @@ jobs:
 
       - name: "Auto Merges Pull Request."
         if: ${{steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major'}}
-        uses: actions/github-script@v6.1.0
+        uses: 'actions/github-script@v6.1.0'
         with:
           github-token: ${{ steps.generate_token.outputs.token }}
           script: |
