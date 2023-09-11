@@ -1,5 +1,7 @@
 # Dev Tools
 
+[![Commit](https://github.com/vatu-team/dev-tools/actions/workflows/commit.yml/badge.svg)](https://github.com/vatu-team/dev-tools/actions/workflows/commit.yml)
+
 ## Project URLs
 
 - [Readme](https://github.com/vatu-team/dev-tools/blob/main/readme.md)
