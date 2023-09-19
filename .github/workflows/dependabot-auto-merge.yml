@@ -39,7 +39,7 @@ jobs:
     steps:
 
       - name: "Generate Vatu Bot token."
-        uses: 'tibdex/github-app-token@v2.0'
+        uses: 'tibdex/github-app-token@v2.1'
         id: generate_token
         with:
           app_id: ${{ secrets.VATU_BOT_ID }}
