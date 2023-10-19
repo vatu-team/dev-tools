@@ -38,3 +38,22 @@ jobs:
         with:
           header: validate-dependabot
           message: ${{ steps.validate.outputs.markdown }}
+
+  validate-composer:
+    name: 'Validate Composer config'
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - name: "Checkout repository"
+        uses: "actions/checkout@v3.5.2"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@2.25.2"
+        with:
+          php-version: "latest"
+          coverage: "none"
+          tools: composer
+
+      - name: 'Validate Composer'
+        run: |
+          composer validate
