@@ -31,7 +31,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - uses: 'actions/checkout@v4.1.1'
-      - uses: 'marocchino/validate-dependabot@v2.2.0'
+      - uses: 'marocchino/validate-dependabot@v3.0.0'
         id: validate
       - uses: 'marocchino/sticky-pull-request-comment@v2.9.0'
         if: always()
