@@ -30,7 +30,7 @@ jobs:
     name: 'Validate Dependabot Config'
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: 'actions/checkout@v4.1.5'
+      - uses: 'actions/checkout@v4.1.6'
       - uses: 'marocchino/validate-dependabot@v3.0.0'
         id: validate
       - uses: 'marocchino/sticky-pull-request-comment@v2.9.0'
@@ -45,7 +45,7 @@ jobs:
 
     steps:
       - name: "Checkout repository"
-        uses: "actions/checkout@v4.1.5"
+        uses: "actions/checkout@v4.1.6"
 
       - name: "Install PHP"
         uses: "shivammathur/setup-php@2.30.4"
