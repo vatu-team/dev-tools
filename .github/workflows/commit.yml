@@ -30,14 +30,19 @@ jobs:
     name: 'Validate Dependabot Config'
     runs-on: 'ubuntu-latest'
     steps:
+
       - uses: 'actions/checkout@v4.2.2'
-      - uses: 'marocchino/validate-dependabot@v3.0.0'
-        id: validate
-      - uses: 'marocchino/sticky-pull-request-comment@v2.9.1'
-        if: always()
+
+      - uses: 'actions/setup-node@v4.2.0'
         with:
-          header: validate-dependabot
-          message: ${{ steps.validate.outputs.markdown }}
+          node-version: '22'
+          cache: 'npm'
+
+      - run: |
+          npm install --global yaml-validator
+
+      - run: |
+          yaml-validator .github/dependabot.yml
 
   validate-composer:
     name: 'Validate Composer config'
