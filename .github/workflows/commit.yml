@@ -31,7 +31,7 @@ jobs:
 
   validate-dependabot:
     name: 'Validate Dependabot Config'
-    runs-on: 'ubuntu-latest'
+    runs-on: 'ubuntu-24.04'
     steps:
       - uses: 'actions/checkout@v4.2.2'
       - uses: 'marocchino/validate-dependabot@v3.0.0'
@@ -44,7 +44,7 @@ jobs:
 
   validate-composer:
     name: 'Validate Composer config'
-    runs-on: 'ubuntu-latest'
+    runs-on: 'ubuntu-24.04'
 
     steps:
       - name: "Checkout repository"
