@@ -24,7 +24,8 @@
         "wp-coding-standards/wpcs": "^3.1"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.45"
+        "ergebnis/composer-normalize": "^2.45",
+        "roave/security-advisories": "dev-latest"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,

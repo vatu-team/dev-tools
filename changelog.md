@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- Dev Tool: SecurityAdvisories
 - PHPStan PHPUnit ^2.0
 - Dev Tool: Composer Normalize
 - Composer Installers ^2.3
