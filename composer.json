@@ -12,6 +12,7 @@
         "phpcsstandards/phpcsextra": "^1.2",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^9.6",
         "povils/phpmnd": "^3.5",
         "rector/rector": "^2.0",
         "slevomat/coding-standard": "^8.16",

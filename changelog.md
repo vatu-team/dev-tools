@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- PHPUnit ^9.6
 - Rector ^2.0
 - PHPStan Extension Installer ^1.4
 - PHP Architecture Decision Records ^2.0
