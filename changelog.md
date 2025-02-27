@@ -7,7 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
-- Nothing.
+- PHP CodeSniffer ^3.11
 
 ### Changed
 
