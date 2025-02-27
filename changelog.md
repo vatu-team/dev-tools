@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- PHP Compatibility dev-develop as 9.99.99
 - Brain Monkey ^2.6
 - PHPUnit ^9.6
 - Rector ^2.0
