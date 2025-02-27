@@ -6,7 +6,7 @@ in reverse chronological order by release.
 ## Unreleased - TBD
 
 ### Added
-
+- PHPStan ^2.1
 - PHP Magic Number Detector ^3.5
 - PHP Parallel Lint ^1.4
 - Slevomat Coding Standard ^8.16
