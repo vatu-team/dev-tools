@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- Dev Tool: Composer Normalize
 - Composer Installers ^2.3
 - PHP Compatibility WP ^2.1
 - PHP Compatibility dev-develop as 9.99.99
