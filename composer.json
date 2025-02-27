@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.4",
         "brain/monkey": "^2.6",
+        "composer/installers": "^2.3",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "globtec/phpadr": "^2.0",
         "php-parallel-lint/php-parallel-lint": "^1.4",
@@ -27,6 +28,7 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
             "allow-plugins": {
+            "composer/installers": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true
         },
