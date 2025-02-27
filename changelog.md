@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- Brain Monkey ^2.6
 - PHPUnit ^9.6
 - Rector ^2.0
 - PHPStan Extension Installer ^1.4

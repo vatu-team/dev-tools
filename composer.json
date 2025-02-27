@@ -6,6 +6,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.4",
+        "brain/monkey": "^2.6",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "globtec/phpadr": "^2.0",
         "php-parallel-lint/php-parallel-lint": "^1.4",
