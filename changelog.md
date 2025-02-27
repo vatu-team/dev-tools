@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- PHPStan PHPUnit ^2.0
 - Dev Tool: Composer Normalize
 - Composer Installers ^2.3
 - PHP Compatibility WP ^2.1
