@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- WP Coding Standards ^3.1
 - PHP CodeSniffer Extra ^1.2
 - PHP CodeSniffer Composer Installer ^1.0
 - PHP CodeSniffer ^3.11
