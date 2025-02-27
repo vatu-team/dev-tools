@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- PHP Magic Number Detector ^3.5
 - PHP Parallel Lint ^1.4
 - Slevomat Coding Standard ^8.16
 - WP Coding Standards ^3.1
