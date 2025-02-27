@@ -10,6 +10,7 @@
         "globtec/phpadr": "^2.0",
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpcsstandards/phpcsextra": "^1.2",
+        "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
         "povils/phpmnd": "^3.5",
         "slevomat/coding-standard": "^8.16",
@@ -21,7 +22,8 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
             "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
