@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- PHP 8.0 support
 - Dev Tool: SecurityAdvisories
 - PHPStan PHPUnit ^2.0
 - Dev Tool: Composer Normalize
