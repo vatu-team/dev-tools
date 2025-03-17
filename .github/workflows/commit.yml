@@ -148,6 +148,11 @@ jobs:
           ini-file: none
           php-version: "${{ matrix.php-version }}"
 
+      - name: "Logs debug information."
+        run: |
+          php --version
+          composer --version
+
       - name: "Validate composer.json and composer.lock"
         run: "composer validate --ansi --strict"
 
