@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- Mockery ^1.6
 - PHP 8.4 support
 - PHP 8.3 support
 - PHP 8.2 support
