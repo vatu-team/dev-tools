@@ -16,7 +16,7 @@
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.6",
+        "phpunit/phpunit": "^9.6 || ^10.5 ||^11.5 || ^12.1",
         "povils/phpmnd": "^3.6",
         "rector/rector": "^2.0",
         "slevomat/coding-standard": "^8.18",

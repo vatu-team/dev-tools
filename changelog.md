@@ -7,6 +7,9 @@ in reverse chronological order by release.
 
 ### Added
 
+- PHPUnit ^12.1 support
+- PHPUnit ^11.5 support
+- PHPUnit ^10.5 support
 - PHP 8.4 support
 - PHP 8.3 support
 - PHP 8.2 support
