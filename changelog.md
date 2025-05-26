@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- Composer Dependency Analyser
 - PHPUnit Polyfills
 - PHPUnit ^12.1 support
 - PHPUnit ^11.5 support
