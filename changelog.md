@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- WP Coding Standards ^2.3 support
 - Composer Dependency Analyser
 - PHPUnit Polyfills
 - PHPUnit ^12.1 support
