@@ -21,7 +21,6 @@ in reverse chronological order by release.
 - PHPStan PHPUnit ^2.0
 - Dev Tool: Composer Normalize
 - Composer Installers ^2.3
-- PHP Compatibility WP ^2.1
 - PHP Compatibility dev-develop as 9.99.99
 - Brain Monkey ^2.6
 - PHPUnit ^9.6
@@ -32,7 +31,6 @@ in reverse chronological order by release.
 - PHP Magic Number Detector ^3.5
 - PHP Parallel Lint ^1.4
 - Slevomat Coding Standard ^8.16
-- WP Coding Standards ^3.1
 - PHP CodeSniffer Extra ^1.2
 - PHP CodeSniffer Composer Installer ^1.0
 - PHP CodeSniffer ^3.11
