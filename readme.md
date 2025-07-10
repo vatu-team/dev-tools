@@ -8,6 +8,17 @@
 
 - [Readme](https://github.com/vatu-team/dev-tools/blob/trunk/readme.md)
 
+## Supported Versions
+
+| PHP Version | Dev Tools 2 |
+|-------------| :----:      |
+| PHP 8.4.    | ✔           |
+| PHP 8.3     | ✔           |
+| PHP 8.2     | ✔           |
+| PHP 8.1     | ✔           |
+| PHP 8.0     | ✔           |
+| PHP 7.4     | ✔           |
+
 ## Reporting Issues
 
 If you spot any issues please create a ticket via the project's Issue Tracker. Including the issue, the browser and operating system, and how to replicate it. If the issue is security related please use the contact information below.
