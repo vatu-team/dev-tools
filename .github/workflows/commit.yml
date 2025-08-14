@@ -93,7 +93,7 @@ jobs:
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: "Sets up Caching."
-        uses: "actions/cache@v4.2.1"
+        uses: "actions/cache@v4.2.4"
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-php-composer-build-${{ hashFiles('composer.lock') }}
