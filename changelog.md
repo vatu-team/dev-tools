@@ -7,6 +7,7 @@ in reverse chronological order by release.
 
 ### Added
 
+- Mockery ^1.6
 - Composer Dependency Analyser
 - PHPUnit Polyfills
 - PHPUnit ^12.1 support
