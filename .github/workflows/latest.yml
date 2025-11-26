@@ -1,0 +1,78 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+#
+# Version 1.0.0
+# Author: Michael Bragg <mike@vatu.dev>
+
+name: 'Latest'
+
+permissions:
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - 'trunk'
+
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}--{{github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  COMPOSER_ALLOW_SUPERUSER: "1" # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
+
+jobs:
+
+  install:
+    name: "Install dependencies"
+    runs-on: "ubuntu-24.04"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - "8.5"
+          - "8.6"
+
+        dependencies:
+          - "lowest"
+          - "highest"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v6.0.0"
+
+      - name: "Set up PHP"
+        uses: "shivammathur/setup-php@2.35.5"
+        with:
+          coverage: "none"
+          ini-values: "memory_limit=-1"
+          tools: "composer"
+          ini-file: none
+          php-version: "${{ matrix.php-version }}"
+
+      - name: "Logs debug information."
+        run: |
+          php --version
+          composer --version
+
+      - name: "Validate composer.json and composer.lock"
+        run: "composer validate --ansi --strict"
+
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        if: ${{ matrix.dependencies == 'lowest' }}
+        run: |
+          composer update --ansi --no-interaction --ignore-platform-req=php --no-progress --prefer-lowest --working-dir="${GITHUB_WORKSPACE}"
+
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        if: ${{ matrix.dependencies == 'highest' }}
+        run: |
+          composer install --ansi --no-interaction --ignore-platform-req=php --no-progress --working-dir="${GITHUB_WORKSPACE}"
