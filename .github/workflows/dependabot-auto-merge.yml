@@ -1,0 +1,81 @@
+# Vatu:   Dependabot Auto Merge
+# Author: Michael Bragg <mike@vatu.co.uk>
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "Dependabot Auto Merge"
+
+on:
+
+  workflow_run:
+    workflows:
+      - 'Commit'
+    types:
+    - completed
+    branches:
+      - 'dependabot/**'
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+
+  # Dependabot Auto Merge.
+  #
+  # Performs the following steps:
+  # - Generate Vatu Bot token.
+  # - Fetch Dependabot metadata.
+  # - Auto Approve Pull Request
+  # - Auto Merges Pull Request.
+  auto-merge-pr:
+
+    runs-on: 'ubuntu-24.04'
+
+    # Only run if the creator is Dependabot and previous workflow was successful.
+    if: >
+      github.actor == 'dependabot[bot]' &&
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+
+      - name: "Generate Vatu Bot token."
+        uses: 'tibdex/github-app-token@v2.1'
+        id: generate_token
+        with:
+          app_id: ${{ secrets.VATU_BOT_ID }}
+          private_key: ${{ secrets.VATU_BOT_KEY }}
+
+      - name: "Fetch Dependabot metadata."
+        id: dependabot-metadata
+        uses: 'dependabot/fetch-metadata@v2.3.0'
+        with:
+          github-token: ${{ steps.generate_token.outputs.token }}
+          alert-lookup: true
+          compat-lookup: true
+          skip-commit-verification: true
+
+      - name: "Auto Approve Pull Request."
+        if: ${{steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major'}}
+        uses: 'actions/github-script@v7.0.1'
+        with:
+          github-token: ${{ steps.generate_token.outputs.token }}
+          script: |
+            github.rest.pulls.createReview({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.workflow_run.pull_requests[0].number,
+              event: 'APPROVE'
+            })
+
+      - name: "Auto Merges Pull Request."
+        if: ${{steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major'}}
+        uses: 'actions/github-script@v7.0.1'
+        with:
+          github-token: ${{ steps.generate_token.outputs.token }}
+          script: |
+            github.rest.pulls.merge({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.workflow_run.pull_requests[0].number,
+              merge_method: 'rebase'
+            })

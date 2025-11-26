@@ -3,11 +3,12 @@
 All notable changes to this project will be documented in this file,
 in reverse chronological order by release.
 
-## Unreleased - TBD
+## Unreleased - 2.1
 
 ### Added
 
-- Nothing
+- Added: PHP 8.5 support
+- Changed: Improved documentation
 
 ### Changed
 
