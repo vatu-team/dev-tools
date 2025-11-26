@@ -70,9 +70,11 @@ jobs:
       - name: "Install ${{ matrix.dependencies }} dependencies with composer"
         if: ${{ matrix.dependencies == 'lowest' }}
         run: |
-          composer update --ansi --no-interaction --ignore-platform-req=php --no-progress --prefer-lowest --working-dir="${GITHUB_WORKSPACE}"
+          composer require php:"~${{ matrix.php-version }}"
+          composer update --ansi --no-interaction --no-progress --prefer-lowest --working-dir="${GITHUB_WORKSPACE}"
 
       - name: "Install ${{ matrix.dependencies }} dependencies with composer"
         if: ${{ matrix.dependencies == 'highest' }}
         run: |
-          composer install --ansi --no-interaction --ignore-platform-req=php --no-progress --working-dir="${GITHUB_WORKSPACE}"
+          composer require php:"~${{ matrix.php-version }}"
+          composer install --ansi --no-interaction --no-progress --working-dir="${GITHUB_WORKSPACE}"
