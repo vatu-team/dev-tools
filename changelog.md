@@ -7,7 +7,8 @@ in reverse chronological order by release.
 
 ### Added
 
-- Nothing
+- PHP CodeSniffer ^4.0
+- PHP Compatibility ^10.0.0
 
 ### Changed
 
