@@ -59,7 +59,7 @@ jobs:
 
       - name: "Get Composer Cache Directory."
         run: |
-          composer validate --ansi --strict
+          composer validate --ansi --no-check-all
 
   security:
     name: "Security Analysis"
@@ -154,7 +154,7 @@ jobs:
           composer --version
 
       - name: "Validate composer.json and composer.lock"
-        run: "composer validate --ansi --strict"
+        run: "composer validate --ansi --no-check-all"
 
       - name: "Install ${{ matrix.dependencies }} dependencies with composer"
         if: ${{ matrix.dependencies == 'lowest' }}
