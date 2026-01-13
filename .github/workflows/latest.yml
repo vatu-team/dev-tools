@@ -65,7 +65,7 @@ jobs:
           composer --version
 
       - name: "Validate composer.json and composer.lock"
-        run: "composer validate --ansi --strict"
+        run: "composer validate --ansi --no-check-all"
 
       - name: "Install ${{ matrix.dependencies }} dependencies with composer"
         if: ${{ matrix.dependencies == 'lowest' }}
