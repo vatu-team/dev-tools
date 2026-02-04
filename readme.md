@@ -10,14 +10,25 @@
 
 ## Supported Versions
 
-| PHP Version | Dev Tools 2 |
-|-------------| :----:      |
-| PHP 8.4.    | ✔           |
-| PHP 8.3     | ✔           |
-| PHP 8.2     | ✔           |
-| PHP 8.1     | ✔           |
-| PHP 8.0     | ✔           |
-| PHP 7.4     | ✔           |
+PHP Dev Tools follows [Semantic Versioning](https://semver.org/) and supports the following PHP versions:
+
+| PHP Version | Dev Tool v2.0 | Dev Tool v2.1 |
+|-------------| :----:        | :----:        |
+| PHP 8.5     |               | ✔             |
+| PHP 8.4     | ✔             | ✔             |
+| PHP 8.3     | ✔             | ✔             |
+| PHP 8.2     | ✔             | ✔             |
+| PHP 8.1     | ✔             | ✔             |
+| PHP 8.0     | ✔             | ✔             |
+| PHP 7.4     | ✔             | ✔             |
+
+PHP version widening is considered MINOR releases. As this is backward compatible functionality.
+
+PHP version deprecation is considered MINOR releases. These are not breaking changes. If your project requires a version
+of PHP that is no longer supported you are not be able to update this package.
+
+Security releases will be made as PATCH releases. For legacy MINOR versions of this package will be released when deemed beneficial.
+
 
 ## Reporting Issues
 
