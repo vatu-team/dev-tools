@@ -29,6 +29,21 @@ of PHP that is no longer supported you are not be able to update this package.
 
 Security releases will be made as PATCH releases. For legacy MINOR versions of this package will be released when deemed beneficial.
 
+## Installation
+
+## Composer
+
+We reccomend installing the tools seperatly to your project to avoid conflicts with other packages or PHP versions.
+
+```bash
+composer require vatu/dev-tools --working-dir=./tools
+```
+
+Tools can be access via:
+
+```bash
+./tools/vendor/bin/{tools}
+```
 
 ## Reporting Issues
 
