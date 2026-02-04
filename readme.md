@@ -62,5 +62,5 @@ Vatu - [hello@vatu.dev](hello@vatu.dev)
 
 ## Copyright
 
-© 2022-2025 Vatu Limited and licensed for use under the terms of the
+© 2022 Vatu Limited and licensed for use under the terms of the
 MIT License (MIT). Please see [LICENSE](https://github.com/vatu-team/dev-tools/blob/trunk/license.txt) for more information.
