@@ -14,7 +14,7 @@ If you believe you've found a security issue in software that is maintained in t
 
 | Version | In scope | Source code |
 | ------- | -------- | ----------- |
-| latest  | ✅ | https://github.com/vatu-team/dev-tools/ |
+| trunk   | ✅ | https://github.com/vatu-team/dev-tools/ |
 
 ## How to Submit a Report
 
