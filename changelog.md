@@ -3,28 +3,28 @@
 All notable changes to this project will be documented in this file,
 in reverse chronological order by release.
 
-## Unreleased - TBD
+## 2.1.0 - 2026-04-09
 
 ### Added
+
+- PHP 8.5 support
+
+### Changed
 
 - PHP CodeSniffer ^4.0
 - PHP Compatibility ^10.0.0
 
-### Changed
-
-- Nothing.
-
 ### Deprecated
 
-- Nothing.
+- N/A
 
 ### Removed
 
-- Nothing.
+- N/A
 
 ### Fixed
 
-- Nothing.
+- Validation check failing on fixed version
 
 ## 2.0.0 - 2025-08-14
 
