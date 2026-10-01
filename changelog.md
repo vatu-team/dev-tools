@@ -5,6 +5,10 @@ in reverse chronological order by release.
 
 ## 2.2.0 - TBC
 
+### Added
+
+- License Checker support
+
 ### Removed
 
 - Support for PHP 7.4, 8.0, 8.1, 8.2
