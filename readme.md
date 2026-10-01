@@ -12,15 +12,15 @@
 
 PHP Dev Tools follows [Semantic Versioning](https://semver.org/) and supports the following PHP versions:
 
-| PHP Version | Dev Tool v2.0 | Dev Tool v2.1 |
-|-------------| :----:        | :----:        |
-| PHP 8.5     |               | ✔             |
-| PHP 8.4     | ✔             | ✔             |
-| PHP 8.3     | ✔             | ✔             |
-| PHP 8.2     | ✔             | ✔             |
-| PHP 8.1     | ✔             | ✔             |
-| PHP 8.0     | ✔             | ✔             |
-| PHP 7.4     | ✔             | ✔             |
+| PHP Version | Dev Tool v2.0 | Dev Tool v2.1 | Dev Tool v2.2 |
+|-------------| :----:        | :----:        | :----:        |
+| PHP 8.5     | ✘             | ✔             | ✔             |
+| PHP 8.4     | ✔             | ✔             | ✔             |
+| PHP 8.3     | ✔             | ✔             | ✔             |
+| PHP 8.2     | ✔             | ✔             | ✘             |
+| PHP 8.1     | ✔             | ✔             | ✘             |
+| PHP 8.0     | ✔             | ✔             | ✘             |
+| PHP 7.4     | ✔             | ✔             | ✘             |
 
 PHP version widening is considered MINOR releases. As this is backward compatible functionality.
 

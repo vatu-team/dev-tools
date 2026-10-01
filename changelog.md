@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file,
 in reverse chronological order by release.
 
+## 2.2.0 - TBC
+
+### Removed
+
+- Support for PHP 7.4, 8.0, 8.1, 8.2
+
 ## 2.1.0 - 2026-04-09
 
 ### Added
