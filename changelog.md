@@ -8,6 +8,7 @@ in reverse chronological order by release.
 ### Added
 
 - License Checker support
+- Codeception ^5.3 support
 
 ### Removed
 
