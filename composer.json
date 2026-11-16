@@ -27,7 +27,7 @@
         "yoast/phpunit-polyfills": "^4.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.47",
+        "ergebnis/composer-normalize": "^2.57",
         "roave/security-advisories": "dev-latest"
     },
     "minimum-stability": "stable",
